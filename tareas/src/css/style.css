@@ -1,0 +1,154 @@
+.container { 
+    display: block; 
+    background: transparent;
+    padding: 25px 50px 0px;
+  }
+
+.form {
+    position: relative; 
+    margin-bottom: 45px; 
+}
+
+.text {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom:1px solid #757575;
+}
+
+.label {
+    color: #999; 
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.highlight {
+    position: relative; 
+    display: block;
+    width: 315px;
+}
+
+.text:focus {
+    outline: none;
+}
+
+.text:focus~.label, .text:valid~.label {
+    top: -20px;
+    font-size: 14px;
+    color: #007AFF;
+  }
+
+.highlight::before, .highlight::after 	{
+    content: '';
+    height: 2px; 
+    width: 0;
+    bottom: 1px; 
+    position: absolute;
+    background: #007AFF; 
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+  }
+
+.highlight::before {
+    left: 50%;
+  }
+  
+.highlight::after {
+    right: 50%; 
+  }
+
+.text:focus~.highlight::before, .text:focus~.highlight::after {
+    width:50%;
+}
+
+.check {
+    left: 20px;
+    position: relative;
+    display: block;
+    padding-right: 460px;
+    top: 7px;
+    --color: #007AFF;  
+}
+
+.check .checkbox:checked ~ .square {
+    background-color: var(--color);
+    border-color: var(--color);
+    background-size: 80%;
+}
+
+.check .checkbox {
+    display: none;
+}
+  
+.check .checkbox:checked ~ .detail {
+    color: #007AFF;
+}
+  
+.check .square{
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #999;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+    background: transparent;
+    background-size: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
+  
+.check .detail {
+    color: #999;
+    font-size: 18px;
+}
+
+.button {
+    left: 220px;
+    top: -16px;
+	cursor: pointer;
+	background: #007AFF;
+	padding: 3px 24px;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+	font-weight: 700;
+	border: 1px solid #999;
+	border-radius: 3px;
+	overflow: hidden;
+	color: #fff;
+}
+
+.titleText {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textBody {
+    text-align: justify;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.message {
+    font-weight: bold;
+    padding: 25px 50px 0px;
+}

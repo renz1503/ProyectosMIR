@@ -1,0 +1,17 @@
+.titleText {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textBody {
+    text-align: justify;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.message {
+    font-weight: bold;
+}
